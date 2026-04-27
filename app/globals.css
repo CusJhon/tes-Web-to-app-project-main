@@ -1,0 +1,130 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #111111;
+  --color-border: #1a1a1a;
+  --color-primary: #0ff;
+  --color-primary-hover: #0cc;
+  --color-accent: #0ff;
+}
+
+@layer base {
+  :root {
+    --neon-cyan: 0, 255, 255;
+    --neon-green: 0, 255, 0;
+    --neon-yellow: 255, 255, 0;
+    --neon-red: 255, 0, 51;
+  }
+}
+
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  
+  .shadow-glow-green {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  }
+  
+  .shadow-glow-red {
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.3);
+  }
+
+  .text-neon-cyan {
+    color: #0ff;
+  }
+  
+  .text-neon-green {
+    color: #0f0;
+  }
+  
+  .text-neon-yellow {
+    color: #ff0;
+  }
+  
+  .text-neon-red {
+    color: #f03;
+  }
+
+  .border-neon-cyan {
+    border-color: #0ff;
+  }
+  
+  .border-neon-green {
+    border-color: #0f0;
+  }
+  
+  .border-neon-red {
+    border-color: #f03;
+  }
+
+  .bg-neon-cyan {
+    background-color: #0ff;
+  }
+  
+  .bg-neon-green {
+    background-color: #0f0;
+  }
+  
+  .bg-neon-red {
+    background-color: #f03;
+  }
+
+  .animate-typing {
+    animation: typing 3s steps(40, end);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+  border-left: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.6);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #0ff;
+}
+
+/* Input Autofill Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0ff;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
